@@ -27,7 +27,7 @@ parameters {
         
           stage ("Deploy to Production"){
                     steps {
-                        sh "scp -i  /var/lib/jenkins/cheth.pem ./target/*.war ec2-user@${params.tomcat_prod}:/opt/apache-tomcat-7.0.53/webapps"
+                        sh 'scp -i  /var/lib/jenkins/cheth.pem ./target/*.war ec2-user@${params.tomcat_prod}:/opt/apache-tomcat-7.0.53/webapps'
                     }
               }
          }
